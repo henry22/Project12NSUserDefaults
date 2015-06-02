@@ -12,6 +12,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var people = [Person]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +55,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let jpegData = UIImageJPEGRepresentation(newImage, 80)
         //There's a method on NSData called writeToFile() that writes its data to disk
         jpegData.writeToFile(imagePath, atomically: true)
+        
+        //That stores the image name in the Person object and gives them a default name of "Unknown", before reloading the collection view
+        let person = Person(name: "Unknown", image: imageName)
+        people.append(person)
+        
+        collectionView.reloadData()
         
         dismissViewControllerAnimated(true, completion: nil)
     }
