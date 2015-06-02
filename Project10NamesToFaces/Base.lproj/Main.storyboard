@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G8O-qu-qPI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-7A-ZsH">
-                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cbH-d3-Qkf">
                                     <size key="itemSize" width="140" height="180"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -32,11 +33,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACT-4s-2Ml">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ACT-4s-2Ml">
                                                     <rect key="frame" x="10" y="10" width="120" height="120"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD3-GV-nI0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD3-GV-nI0">
                                                     <rect key="frame" x="10" y="134" width="120" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="qP8-tW-JYC"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -45,6 +49,15 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ACT-4s-2Ml" firstAttribute="centerX" secondItem="mFF-bM-Xqv" secondAttribute="centerX" id="6OH-qh-RQ0"/>
+                                            <constraint firstItem="ACT-4s-2Ml" firstAttribute="leading" secondItem="mFF-bM-Xqv" secondAttribute="leadingMargin" constant="2" id="MSc-NW-dS8"/>
+                                            <constraint firstItem="ACT-4s-2Ml" firstAttribute="top" secondItem="mFF-bM-Xqv" secondAttribute="topMargin" constant="2" id="PqU-Sy-jLI"/>
+                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="trailing" secondItem="ACT-4s-2Ml" secondAttribute="trailing" id="YR4-oY-dsU"/>
+                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="top" secondItem="ACT-4s-2Ml" secondAttribute="bottom" constant="4" id="hCH-UE-Sh7"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xD3-GV-nI0" secondAttribute="bottom" constant="-2" id="uqx-ca-3eH"/>
+                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="leading" secondItem="ACT-4s-2Ml" secondAttribute="leading" id="yvT-rn-y0i"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="ACT-4s-2Ml" id="DjV-tL-SvT"/>
                                             <outlet property="name" destination="xD3-GV-nI0" id="H57-fO-Z6L"/>
@@ -60,10 +73,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rkc-7A-ZsH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="32C-wf-htt"/>
+                            <constraint firstItem="Rkc-7A-ZsH" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="LGw-2G-Orp"/>
+                            <constraint firstItem="Rkc-7A-ZsH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="V48-ld-xtH"/>
+                            <constraint firstAttribute="trailing" secondItem="Rkc-7A-ZsH" secondAttribute="trailing" id="adI-Ee-OJb"/>
+                            <constraint firstItem="Rkc-7A-ZsH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hpJ-Ow-f4c"/>
                             <constraint firstAttribute="trailing" secondItem="Rkc-7A-ZsH" secondAttribute="trailing" id="jd8-DF-xkw"/>
                             <constraint firstAttribute="bottom" secondItem="Rkc-7A-ZsH" secondAttribute="bottom" constant="-64" id="pTv-nV-VLV"/>
                             <constraint firstItem="Rkc-7A-ZsH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="pXP-Bs-bnc"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Rkc-7A-ZsH" secondAttribute="bottom" id="vJO-Pj-lH2"/>
+                            <constraint firstItem="Rkc-7A-ZsH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="wsN-dF-OBa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="32C-wf-htt"/>
+                                <exclude reference="V48-ld-xtH"/>
+                                <exclude reference="adI-Ee-OJb"/>
+                                <exclude reference="pTv-nV-VLV"/>
+                                <exclude reference="pXP-Bs-bnc"/>
+                                <exclude reference="vJO-Pj-lH2"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ofC-5N-XyZ"/>
                     <connections>
