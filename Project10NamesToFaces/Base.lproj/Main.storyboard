@@ -73,23 +73,31 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rkc-7A-ZsH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="32C-wf-htt"/>
+                            <constraint firstItem="Rkc-7A-ZsH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="JGG-JR-Xbw"/>
                             <constraint firstItem="Rkc-7A-ZsH" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="LGw-2G-Orp"/>
                             <constraint firstItem="Rkc-7A-ZsH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="V48-ld-xtH"/>
+                            <constraint firstAttribute="trailing" secondItem="Rkc-7A-ZsH" secondAttribute="trailing" id="XII-Fh-evM"/>
                             <constraint firstAttribute="trailing" secondItem="Rkc-7A-ZsH" secondAttribute="trailing" id="adI-Ee-OJb"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Rkc-7A-ZsH" secondAttribute="bottom" id="bnb-Y0-1Tn"/>
                             <constraint firstItem="Rkc-7A-ZsH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hpJ-Ow-f4c"/>
                             <constraint firstAttribute="trailing" secondItem="Rkc-7A-ZsH" secondAttribute="trailing" id="jd8-DF-xkw"/>
                             <constraint firstAttribute="bottom" secondItem="Rkc-7A-ZsH" secondAttribute="bottom" constant="-64" id="pTv-nV-VLV"/>
                             <constraint firstItem="Rkc-7A-ZsH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="pXP-Bs-bnc"/>
+                            <constraint firstItem="Rkc-7A-ZsH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sDW-qr-a9w"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Rkc-7A-ZsH" secondAttribute="bottom" id="vJO-Pj-lH2"/>
                             <constraint firstItem="Rkc-7A-ZsH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="wsN-dF-OBa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="32C-wf-htt"/>
+                                <exclude reference="LGw-2G-Orp"/>
                                 <exclude reference="V48-ld-xtH"/>
                                 <exclude reference="adI-Ee-OJb"/>
+                                <exclude reference="hpJ-Ow-f4c"/>
+                                <exclude reference="jd8-DF-xkw"/>
                                 <exclude reference="pTv-nV-VLV"/>
                                 <exclude reference="pXP-Bs-bnc"/>
+                                <exclude reference="wsN-dF-OBa"/>
                                 <exclude reference="vJO-Pj-lH2"/>
                             </mask>
                         </variation>
