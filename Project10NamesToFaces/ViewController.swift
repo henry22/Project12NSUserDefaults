@@ -80,14 +80,49 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     //This must return an integer, and tells the collection view how many items to show in its grid
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return people.count
     }
     
     //This must return an object of type UICollectionViewCell,and we already designed a prototype, and configured the PersonCell class for it,so we need to create and return these
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         //It creates a collection view cell using the reuse identified we specified, in this case "Person", this method will automatically try to reuse collection view cells, as soon as a cell scrolls out of view it can be recycled
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Person", forIndexPath: indexPath) as! PersonCell
+        //Pull out the person from the people array at the correct position
+        let person = people[indexPath.item]
+        //Set the name label to the person's name
+        cell.name.text = person.name
+        //Create a UIImage from the person's image filename, adding it to the value from getDocumentsDirectory() so that we have a full path for the image
+        let path = getDocumentsDirectory().stringByAppendingPathComponent(person.image)
+        cell.imageView.image = UIImage(contentsOfFile: path)
+        //This is all done using CALayer, so we need to convert the UIColor to a CGColor
+        cell.imageView.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).CGColor
+        cell.imageView.layer.borderWidth = 2
+        cell.imageView.layer.cornerRadius = 3
+        //Rounds the corners of a CALayer – or in our case the UIView being drawn by the CALayer
+        cell.layer.cornerRadius = 7
+        
         return cell
+    }
+    
+    //Implement the UICollectionView's didSelectItemAtIndexPath method, which is triggered when the user taps a cell
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let person = people[indexPath.item]
+        
+        let alertController = UIAlertController(title: "Rename person", message: nil, preferredStyle: .Alert)
+        //Adding a text field to an alert controller
+        alertController.addTextFieldWithConfigurationHandler(nil)
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        //To save the changes, we need to add a closure that pulls out the text field value and assigns it to the person's name property
+        alertController.addAction(UIAlertAction(title: "OK", style: .Default) { [unowned self, alertController] _ in
+            let newName = alertController.textFields![0] as! UITextField
+            person.name = newName.text
+            
+            //Reload the collection view to reflect the change
+            self.collectionView.reloadData()
+        })
+        
+        presentViewController(alertController, animated: true, completion: nil)
     }
 }
 
