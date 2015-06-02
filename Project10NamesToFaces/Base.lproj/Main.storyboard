@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-7A-ZsH">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-7A-ZsH">
                                 <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cbH-d3-Qkf">
                                     <size key="itemSize" width="140" height="180"/>
@@ -25,7 +25,7 @@
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mFF-bM-Xqv">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Person" id="mFF-bM-Xqv" customClass="PersonCell" customModule="Project10NamesToFaces" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -38,18 +38,32 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD3-GV-nI0">
                                                     <rect key="frame" x="10" y="134" width="120" height="40"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="ACT-4s-2Ml" id="DjV-tL-SvT"/>
+                                            <outlet property="name" destination="xD3-GV-nI0" id="H57-fO-Z6L"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="hwa-Uk-spW"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Zca-A6-30a"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rkc-7A-ZsH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="32C-wf-htt"/>
+                            <constraint firstAttribute="trailing" secondItem="Rkc-7A-ZsH" secondAttribute="trailing" id="jd8-DF-xkw"/>
+                            <constraint firstAttribute="bottom" secondItem="Rkc-7A-ZsH" secondAttribute="bottom" constant="-64" id="pTv-nV-VLV"/>
+                            <constraint firstItem="Rkc-7A-ZsH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="pXP-Bs-bnc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ofC-5N-XyZ"/>
                     <connections>
@@ -58,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="339"/>
+            <point key="canvasLocation" x="963" y="334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gk4-Cl-TxX">

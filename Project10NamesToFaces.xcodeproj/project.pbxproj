@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA74CAD41B1D6AC300C0EDDC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CAD31B1D6AC300C0EDDC /* PersonCell.swift */; };
 		BAE518A61B1CA3BA005547E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE518A51B1CA3BA005547E8 /* AppDelegate.swift */; };
 		BAE518A81B1CA3BA005547E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE518A71B1CA3BA005547E8 /* ViewController.swift */; };
 		BAE518AB1B1CA3BA005547E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE518A91B1CA3BA005547E8 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA74CAD31B1D6AC300C0EDDC /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		BAE518A01B1CA3BA005547E8 /* Project10NamesToFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project10NamesToFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE518A41B1CA3BA005547E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE518A51B1CA3BA005547E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,12 +79,10 @@
 		BAE518A21B1CA3BA005547E8 /* Project10NamesToFaces */ = {
 			isa = PBXGroup;
 			children = (
-				BAE518A51B1CA3BA005547E8 /* AppDelegate.swift */,
 				BAE518A71B1CA3BA005547E8 /* ViewController.swift */,
 				BAE518A91B1CA3BA005547E8 /* Main.storyboard */,
-				BAE518AC1B1CA3BA005547E8 /* Images.xcassets */,
-				BAE518AE1B1CA3BA005547E8 /* LaunchScreen.xib */,
 				BAE518A31B1CA3BA005547E8 /* Supporting Files */,
+				BA74CAD31B1D6AC300C0EDDC /* PersonCell.swift */,
 			);
 			path = Project10NamesToFaces;
 			sourceTree = "<group>";
@@ -90,6 +90,9 @@
 		BAE518A31B1CA3BA005547E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAE518A51B1CA3BA005547E8 /* AppDelegate.swift */,
+				BAE518AC1B1CA3BA005547E8 /* Images.xcassets */,
+				BAE518AE1B1CA3BA005547E8 /* LaunchScreen.xib */,
 				BAE518A41B1CA3BA005547E8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA74CAD41B1D6AC300C0EDDC /* PersonCell.swift in Sources */,
 				BAE518A81B1CA3BA005547E8 /* ViewController.swift in Sources */,
 				BAE518A61B1CA3BA005547E8 /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +413,7 @@
 				BAE518C11B1CA3BA005547E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAE518C21B1CA3BA005547E8 /* Build configuration list for PBXNativeTarget "Project10NamesToFacesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				BAE518C41B1CA3BA005547E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
