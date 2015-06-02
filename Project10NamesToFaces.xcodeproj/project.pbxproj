@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA74CAD41B1D6AC300C0EDDC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CAD31B1D6AC300C0EDDC /* PersonCell.swift */; };
+		BA74CAD61B1DAA8300C0EDDC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74CAD51B1DAA8300C0EDDC /* Person.swift */; };
 		BAE518A61B1CA3BA005547E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE518A51B1CA3BA005547E8 /* AppDelegate.swift */; };
 		BAE518A81B1CA3BA005547E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE518A71B1CA3BA005547E8 /* ViewController.swift */; };
 		BAE518AB1B1CA3BA005547E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE518A91B1CA3BA005547E8 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		BA74CAD31B1D6AC300C0EDDC /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		BA74CAD51B1DAA8300C0EDDC /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BAE518A01B1CA3BA005547E8 /* Project10NamesToFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project10NamesToFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE518A41B1CA3BA005547E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE518A51B1CA3BA005547E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				BAE518A91B1CA3BA005547E8 /* Main.storyboard */,
 				BAE518A31B1CA3BA005547E8 /* Supporting Files */,
 				BA74CAD31B1D6AC300C0EDDC /* PersonCell.swift */,
+				BA74CAD51B1DAA8300C0EDDC /* Person.swift */,
 			);
 			path = Project10NamesToFaces;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				BA74CAD41B1D6AC300C0EDDC /* PersonCell.swift in Sources */,
 				BAE518A81B1CA3BA005547E8 /* ViewController.swift in Sources */,
+				BA74CAD61B1DAA8300C0EDDC /* Person.swift in Sources */,
 				BAE518A61B1CA3BA005547E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
