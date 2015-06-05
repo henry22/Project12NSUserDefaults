@@ -87,6 +87,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         //It creates a collection view cell using the reuse identified we specified, in this case "Person", this method will automatically try to reuse collection view cells, as soon as a cell scrolls out of view it can be recycled
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Person", forIndexPath: indexPath) as! PersonCell
+        cell.contentView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
         //Pull out the person from the people array at the correct position
         let person = people[indexPath.item]
         //Set the name label to the person's name
@@ -96,8 +98,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.imageView.image = UIImage(contentsOfFile: path)
         //This is all done using CALayer, so we need to convert the UIColor to a CGColor
         cell.imageView.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).CGColor
-        cell.imageView.layer.borderWidth = 2
-        cell.imageView.layer.cornerRadius = 3
         //Rounds the corners of a CALayer – or in our case the UIView being drawn by the CALayer
         cell.layer.cornerRadius = 7
         

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G8O-qu-qPI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -33,30 +34,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ACT-4s-2Ml">
-                                                    <rect key="frame" x="10" y="10" width="120" height="120"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD3-GV-nI0">
-                                                    <rect key="frame" x="10" y="134" width="120" height="40"/>
+                                                    <rect key="frame" x="8" y="138" width="124" height="36"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="qP8-tW-JYC"/>
+                                                        <constraint firstAttribute="height" constant="36" id="Avy-5R-ITA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ACT-4s-2Ml">
+                                                    <rect key="frame" x="8" y="10" width="124" height="124"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="Vs0-aj-qve"/>
+                                                        <constraint firstAttribute="width" secondItem="ACT-4s-2Ml" secondAttribute="height" multiplier="1:1" id="mvQ-wE-EVs"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="ACT-4s-2Ml" firstAttribute="centerX" secondItem="mFF-bM-Xqv" secondAttribute="centerX" id="6OH-qh-RQ0"/>
-                                            <constraint firstItem="ACT-4s-2Ml" firstAttribute="leading" secondItem="mFF-bM-Xqv" secondAttribute="leadingMargin" constant="2" id="MSc-NW-dS8"/>
-                                            <constraint firstItem="ACT-4s-2Ml" firstAttribute="top" secondItem="mFF-bM-Xqv" secondAttribute="topMargin" constant="2" id="PqU-Sy-jLI"/>
-                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="trailing" secondItem="ACT-4s-2Ml" secondAttribute="trailing" id="YR4-oY-dsU"/>
-                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="top" secondItem="ACT-4s-2Ml" secondAttribute="bottom" constant="4" id="hCH-UE-Sh7"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="xD3-GV-nI0" secondAttribute="bottom" constant="-2" id="uqx-ca-3eH"/>
-                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="leading" secondItem="ACT-4s-2Ml" secondAttribute="leading" id="yvT-rn-y0i"/>
+                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="trailing" secondItem="ACT-4s-2Ml" secondAttribute="trailing" id="At2-88-fuI"/>
+                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="trailing" secondItem="mFF-bM-Xqv" secondAttribute="trailingMargin" id="DMw-ZP-wgr"/>
+                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="top" secondItem="ACT-4s-2Ml" secondAttribute="bottom" constant="4" id="FJd-1N-k2R"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xD3-GV-nI0" secondAttribute="bottom" constant="-2" id="G6n-2k-y9h"/>
+                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="leading" secondItem="ACT-4s-2Ml" secondAttribute="leading" id="NgS-E2-R8D"/>
+                                            <constraint firstItem="xD3-GV-nI0" firstAttribute="leading" secondItem="mFF-bM-Xqv" secondAttribute="leadingMargin" id="oIs-Mt-JzX"/>
+                                            <constraint firstItem="ACT-4s-2Ml" firstAttribute="top" secondItem="mFF-bM-Xqv" secondAttribute="topMargin" constant="2" id="yDY-hA-IIl"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="ACT-4s-2Ml" id="DjV-tL-SvT"/>
