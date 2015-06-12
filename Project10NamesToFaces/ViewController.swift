@@ -18,6 +18,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewPerson")
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        //use the objectForKey() method to pull out an optional NSData
+        if let savedPeople = defaults.objectForKey("people") as? NSData {
+            people = NSKeyedUnarchiver.unarchiveObjectWithData(savedPeople) as! [Person]
+        }
     }
     
     func addNewPerson() {
