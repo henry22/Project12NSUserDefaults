@@ -63,6 +63,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.reloadData()
         
         dismissViewControllerAnimated(true, completion: nil)
+        
+        save()
     }
     
     func getDocumentsDirectory() -> String {
@@ -120,9 +122,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             //Reload the collection view to reflect the change
             self.collectionView.reloadData()
+            
+            //self is required because we're inside a closure
+            self.save()
         })
         
         presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func save() {
+        //Turns an object graph into an NSData object
+        let saveData = NSKeyedArchiver.archivedDataWithRootObject(people)
+        //Save that data object to NSUserDefaults
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(saveData, forKey: "people")
     }
 }
 
