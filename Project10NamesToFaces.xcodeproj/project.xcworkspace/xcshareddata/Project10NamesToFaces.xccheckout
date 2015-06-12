@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4E12C4B3-1753-42B0-9F1C-AC19478737F6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Project10NamesToFaces</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8C7A03AFCF24AAC1AB9FD379FBF121BD9EC89295</key>
 		<string>https://github.com/henry22/Project10NamesToFaces.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Project10NamesToFaces.xcodeproj/project.xcworkspace</string>
+	<string>Project10NamesToFaces.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8C7A03AFCF24AAC1AB9FD379FBF121BD9EC89295</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>8C7A03AFCF24AAC1AB9FD379FBF121BD9EC89295</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Project10NamesToFaces</string>
+			<string>Project12NSUserDefaults</string>
 		</dict>
 	</array>
 </dict>

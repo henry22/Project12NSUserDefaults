@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Person: NSObject {
+class Person: NSObject, NSCoding {
     var name: String
     var image: String
     
@@ -16,5 +16,18 @@ class Person: NSObject {
         // assign the parameter to the class's property
         self.name = name
         self.image = image
+    }
+    
+    //required, means "if anyone tries to subclass this class, they are required to implement this method."
+    //The initializer is used when loading objects of this class
+    required init(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObjectForKey("name") as! String
+        image = aDecoder.decodeObjectForKey("image") as! String
+    }
+    
+    //encodeWithCoder() is used when saving
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(image, forKey: "image")
     }
 }
